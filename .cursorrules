@@ -1,0 +1,87 @@
+# Core Principles
+
+## Communication
+- Provide accurate, factual, and concise answers
+- Ask clarifying questions for open-ended tasks
+- Express ambiguity clearly when no definitive answer exists
+- Present multiple perspectives for complex topics
+- Challenge assumptions in questions when necessary
+- Request specific examples when scope is unclear
+- Identify and address potential ambiguity before answering
+- Begin responses with background context and assumptions
+- If no relevant code changes are needed, say this and do not suggest code modifications
+
+## Code Quality
+- Follow PEP 8 style guide and Ruff linting rules for Python code consistency
+- Write descriptive, self-documenting names for variables, functions, and classes
+- Document complex algorithms with inline comments explaining the rationale and approach
+- Favor simplicity over complexity in code design
+- Create direct, purpose-specific functions and classes
+- Avoid unnecessary abstraction and inheritance
+- Use type hints for improved code readability
+- Write comprehensive docstrings for all functions and classes
+- Preserve existing comments when suggesting code modifications!
+- Do not suggest code modifications that only remove comments!
+- Keep or even add inline comments when it makes sense!
+- Provide complete, working code examples with syntax highlighting
+- Structure code for readability and maintainability
+- Follow language-specific best practices and conventions
+- Implement error handling in all code examples
+- Use pathlib for all path operations (avoid os.path)
+- Use typing for type hints (but use built-in types (list, dict) over typing equivalents (List, Dict))
+- Use dataclasses for data containers
+- In for loops, please use idx as the loop variable instead of i
+- Do not remove noqa comments unless they are not relevant
+
+## Project Organization
+- Structure projects with clear separation of concerns using modular architecture
+- Organize distinct components into separate files/folders (models, training, processing, utilities)
+- Document data sources and assumptions clearly
+- Implement proper experiment tracking
+- Document all experimental settings
+- Use consistent naming conventions across project
+- Create and maintain pyproject.toml
+
+## Technical Implementation
+
+### Machine Learning & Deep Learning
+- Design models with proper initialization, normalization, and regularization for optimal performance
+- Implement task-appropriate loss functions (standard, custom, composite, or self-supervised)
+- Use PyTorch for deep learning with GPU acceleration
+- Follow PyTorch best practices including gradient clipping, gradient accumulation, mixed precision, learning rate scheduling, early stopping, etc.
+- Guide through data preprocessing, augmentation, and feature engineering
+- Implement efficient data loading with PyTorch DataLoader
+- Consider model compression and deployment requirements
+- Log experiments with all hyperparameters and results
+- Explain model architecture decisions and tradeoffs
+
+## Performance Optimization
+- Profile code to identify and optimize performance bottlenecks systematically
+- Implement memory-efficient practices including checkpointing, mixed precision, and memory pinning
+- Design efficient data pipelines with prefetching and caching for improved throughput
+- Prefer vectorized operations over explicit loops
+- Use method chaining for data transformations
+- Consider power consumption and efficiency
+- Use vectorized operations and appropriate data structures
+- Optimize for large datasets (memory-mapped files, smart batching)
+- Consider real-time processing constraints
+- Implement efficient signal processing pipelines
+
+### Testing & Quality Assurance
+- Implement comprehensive pytest suites with appropriate fixtures and docstrings
+- Create test structure that mirrors source code organization for maintainability
+- Test edge cases and error handling
+- Validate inputs and outputs at critical points
+- Implement proper logging and validation
+- Provide fallback approaches for edge cases
+- Guide through common pitfalls and prevention
+
+### Model Evaluation & Development
+- Implement appropriate evaluation metrics and validation techniques
+- Guide through model interpretability
+- Use visualization tools (TensorBoard, Matplotlib) for model analysis and monitoring
+- Suggest ablation studies and experimental approaches
+- Suggest out-of-the-box solutions for complex problems
+- Break down complex problems into manageable tasks
+- Present multiple solution approaches with tradeoffs
+- Provide step-by-step implementation guidance
